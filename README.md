@@ -1,49 +1,50 @@
-# 💕 Gửi Cục Zàng 💕
+# Cục Zàng Career Guide 💕
 
-Một trang web cute với thông điệp tình yêu dành cho Cục Zàng.
+Trang web dễ thương giúp "cục zàng" lựa chọn nghề nghiệp phù hợp với tính cách và sở thích.
 
-## 🎨 Tính năng
+## Tính năng
 
-- ✨ Thiết kế cute với màu sắc pastel
-- 💕 Animation trái tim bay
-- ✨ Hiệu ứng sparkle
-- 📱 Responsive design
-- 🎭 Font chữ đẹp mắt
-- 🌈 Gradient background
+- 🎯 10 câu hỏi về tính cách và sở thích
+- 💕 Giao diện dễ thương với phong cách tình yêu
+- 📱 Responsive design cho điện thoại
+- 🤖 Tích hợp ChatGPT để đưa ra gợi ý nghề nghiệp
+- 🎭 Kết quả troll dễ thương
 
-## 🚀 Thiết lập GitHub Pages
+## Cách sử dụng
 
-### Bước 1: Tạo repository trên GitHub
-1. Đăng nhập vào GitHub
-2. Tạo repository mới với tên: `your-username.github.io`
-3. Upload file `index.html` lên repository
+1. **Mở file `index.html`** trong trình duyệt web
+2. **Trả lời 10 câu hỏi** về tính cách và sở thích
+3. **Xem kết quả troll** dễ thương
+4. **Nhận gợi ý nghề nghiệp thật** từ AI
 
-### Bước 2: Kích hoạt GitHub Pages
-1. Vào repository vừa tạo
-2. Chọn tab **Settings**
-3. Cuộn xuống phần **Pages**
-4. Trong **Source**, chọn **Deploy from a branch**
-5. Chọn branch **main** và folder **/(root)**
-6. Click **Save**
+## Setup ChatGPT API (Tùy chọn)
 
-### Bước 3: Truy cập trang web
-Sau vài phút, trang web sẽ có sẵn tại: `https://your-username.github.io`
+Để sử dụng tính năng gợi ý nghề nghiệp từ AI:
 
-## 📁 Cấu trúc file
+1. Đăng ký tài khoản tại [OpenAI](https://platform.openai.com/)
+2. Tạo API key trong dashboard
+3. Mở file `index.html` và tìm dòng:
+   ```javascript
+   'YOUR_OPENAI_API_KEY_HERE'
+   ```
+4. Thay thế bằng API key thật của bạn
+
+**Lưu ý:** Nếu không có API key, trang web sẽ hiển thị gợi ý nghề nghiệp mặc định.
+
+## Cấu trúc file
 
 ```
-├── index.html          # File chính của trang web
-└── README.md          # File hướng dẫn này
+cuczang-prod/
+├── index.html          # Trang web chính
+└── README.md          # Hướng dẫn này
 ```
 
-## 🎯 Tùy chỉnh
+## Bảo mật
 
-Bạn có thể chỉnh sửa nội dung trong file `index.html`:
-- Thay đổi thông điệp trong phần `<div class="message">`
-- Thay đổi màu sắc trong CSS
-- Thêm/bớt emoji
-- Tùy chỉnh animation
+- API key được làm rối trong code để tránh bị lấy cắp
+- Không lưu trữ thông tin người dùng
+- Tất cả xử lý đều trên client-side
 
-## 💝 Lưu ý
+## Tác giả
 
-Trang web này được tạo với tình yêu và sự quan tâm dành cho Cục Zàng. Hy vọng sẽ mang lại nụ cười cho người nhận! 🥰 
+Tạo với ❤️ cho "cục zàng" đặc biệt 
