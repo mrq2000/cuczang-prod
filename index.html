@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cục Zàng Career Guide 💕</title>
+    <title>Hmmm -.-</title>
     <style>
       * {
         margin: 0;
@@ -12,444 +12,163 @@
       }
 
       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #ff6b9d, #c44569, #f8b5d3);
+        font-family: 'Times New Roman', serif;
+        background: #f5f5f5;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow-x: hidden;
+        padding: 20px;
       }
 
-      .container {
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 25px;
-        padding: 30px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        max-width: 90vw;
-        width: 400px;
-        backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .welcome-screen {
-        display: block;
-      }
-
-      .question-screen,
-      .result-screen,
-      .copy-screen {
-        display: none;
-      }
-
-      h1 {
-        color: #e84393;
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-      }
-
-      .message {
-        font-size: 1.1rem;
-        color: #6c5ce7;
-        line-height: 1.6;
-        margin-bottom: 25px;
-        font-weight: 500;
-      }
-
-      .start-btn,
-      .next-btn,
-      .submit-btn {
-        background: linear-gradient(45deg, #fd79a8, #e84393);
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        border-radius: 50px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(232, 67, 147, 0.3);
-        font-weight: 600;
-      }
-
-      .start-btn:hover,
-      .next-btn:hover,
-      .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(232, 67, 147, 0.4);
-      }
-
-      .question {
-        font-size: 1.2rem;
-        color: #2d3436;
-        margin-bottom: 20px;
-        font-weight: 600;
-      }
-
-      .options {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 25px;
-      }
-
-      .option {
-        background: linear-gradient(45deg, #a29bfe, #6c5ce7);
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 1rem;
-        font-weight: 500;
-      }
-
-      .option:hover {
-        transform: scale(1.02);
-        box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
-      }
-
-      .option.selected {
-        background: linear-gradient(45deg, #fd79a8, #e84393);
-        box-shadow: 0 5px 15px rgba(232, 67, 147, 0.4);
-      }
-
-      .progress {
+      .letter-container {
+        background: white;
+        max-width: 800px;
         width: 100%;
-        height: 8px;
-        background: #ddd;
-        border-radius: 10px;
-        margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        border-radius: 15px;
         overflow: hidden;
       }
 
-      .progress-bar {
-        height: 100%;
-        background: linear-gradient(45deg, #fd79a8, #e84393);
-        width: 0%;
-        transition: width 0.3s ease;
+      .letter-header {
+        background: #2c3e50;
+        color: white;
+        padding: 20px 30px;
+        text-align: center;
+        border-bottom: 3px solid #34495e;
       }
 
-      .result-message {
-        font-size: 1.3rem;
-        color: #e84393;
-        margin-bottom: 25px;
-        font-weight: 600;
-        line-height: 1.5;
+      .letter-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+        font-weight: normal;
       }
 
-      .copy-message {
+      .letter-date {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .letter-body {
+        padding: 40px;
+        line-height: 1.8;
         font-size: 1.1rem;
-        color: #6c5ce7;
-        line-height: 1.6;
-        margin-bottom: 25px;
+        color: #333;
       }
 
-      .copy-message p {
+      .letter-greeting {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .letter-content {
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+
+      .letter-content p {
         margin-bottom: 15px;
       }
 
-      .heart {
-        color: #e84393;
-        font-size: 2rem;
-        margin: 10px 0;
-        animation: heartbeat 1.5s ease-in-out infinite;
+      .letter-signature {
+        text-align: right;
+        margin-top: 40px;
+        font-style: italic;
       }
 
-      @keyframes heartbeat {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.1);
-        }
+      .message-screen {
+        display: block;
       }
 
-      @media (max-width: 480px) {
-        .container {
-          padding: 20px;
+
+      .message-content {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        margin-bottom: 25px;
+        line-height: 1.8;
+        text-align: justify;
+      }
+
+
+      @media (max-width: 768px) {
+        .letter-container {
           margin: 10px;
         }
 
-        h1 {
+        .letter-body {
+          padding: 20px;
+        }
+
+        .letter-header {
+          padding: 15px 20px;
+        }
+
+        .letter-header h1 {
           font-size: 1.5rem;
-        }
-
-        .message {
-          font-size: 1rem;
-        }
-
-        .question {
-          font-size: 1.1rem;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <!-- Welcome Screen -->
-      <div class="welcome-screen" id="welcomeScreen">
-        <div class="heart">💕</div>
-        <h1>Cục Zàng Career Guide</h1>
-        <div class="message">
-          Chào cục zàng, để anh giúp cục zàng của anh lựa chọn nghề nghiệp nha
-          💕
+    <div class="letter-container">
+      <!-- Message Screen -->
+      <div class="message-screen" id="messageScreen">
+        <div class="letter-header">
+          <h1>Đôi lời tử tế cuối cùng tôi dành cho cô</h1>
+          <div class="letter-date" id="currentDate"></div>
         </div>
-        <button class="start-btn" onclick="startQuiz()">
-          Bắt đầu thôi nào! 💖
-        </button>
+        <div class="letter-body">
+          <div class="letter-greeting">Chào cô gái tôi từng thương =))),</div>
+          <div class="message-content" id="messageContent">
+            <p>Tôi cũng không định làm cái này đâu, ra đi êm đẹp là tôi đã hết lòng với cô lắm rồi. Nhưng có vẻ tôi là kẻ xấu trong câu truyện của cô với các anh khác nhiều quá nên tôi cần phải nói rõ một xíu.</p>
+            <br/>
+            <p>
+              Ừ thì "Trước ông đấy thích e e cũng trêu trêu xong đổi qua page", oi doi oi chơi chơi thôi hả =)) chơi chơi dữ ta.
+              Cô kể về anh Khoa cho tôi khác thế, thì tôi cũng không bất ngờ khi tôi trong câu chuyện của cô với anh Khoa tôi là người xấu như thế. 
+            </p>
+            <br/>
+            <p>
+              Ừ thì "ổng block em do em từ chối ổng 3 lần", ???? WTF ý là mình k rõ nguyên do thì đừng nói được không?
+            </p>
+            <br/>
+            <p>
+              Sau tất cả những gì anh Khoa kể từ các mốc thời gian cô với a Khoa quen nhau, thì tôi đã hiểu rõ con người cô là như thế nào rồi =))) cô khác xa so với Mơ mà tôi biết quá.
+              Tôi không muốn làm bạn với con người như vậy thì tôi block? Còn cô sai ở đâu như nào thì cô tự biết, cô nên nhớ tôi biết những gì, cô kể cho tôi những gì
+              và tôi có những bằng chứng gì. Hmm, chúng ta cũng đã trò chuyện được gần nửa năm rồi đó, trong khoảng thời gian đó chưa 1 lần tôi hết thương hết quý con người mà cô "diễn" với tôi, cũng gọi là có nhiều kỷ niệm, vui có buồn có nên nếu cô còn chút tôn trọng với chúng. Tôi chỉ muốn xin cô 1 điều cuối, tôi không muốn dây dưa gì với cô nữa, làm ơn đừng lôi tôi vào những bất cứ cuộc trò chuyện của cô sau này. Ai bảo thì cứ bảo không quen là tôi vui rồi.
+            </p>
+            <br/>
+            <b>
+              Đôi lời cuối cùng tôi muốn gửi tới Mơ mà tôi thương (cái người mà cô diễn với tôi ý, không phải cô bây giờ). Em từng nói em muốn con em sẽ được hạnh phúc, có cuộc sống trọn vẹn, đầy đủ ba mẹ không muốn giống như em trong quá khứ. Em muốn có một người chồng trung thủy hết mực yêu em.
+              Em ghét thằng nyc em vì nó cắm sừng em 2-3 cái sừng. Vậy thì anh chúc em làm được điều đó, nhưng mà để làm được điều đó em cũng phải cố gắng giữ bản thân mình sống đúng như những gì em mong muốn từ một người chồng.
+              Đừng như Mơ của hiện tại, anh thấy đang giống hệt như những gì mà mẹ và người yêu cũ đã làm đó. Đừng vì mình bị đối xử như vậy mà cho mình quyền đỗi xử với người khác như thế em nhé.
+              Em vẫn còn trẻ con anh biết chứ, nhưng đến lúc em phải trưởng thành rồi, cố gắng lên nhé Mơ mà anh từng biết -.-.
+            </b>
+            <br/>
+            <br/>
+            <b>
+              Tạm biệt em, cô gái tôi thương chưa bao giờ có thật trên đời.
+            </b>
+          </div>
+          <div class="letter-signature">
+            <p>Trân trọng, Jennie43.</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Question Screen -->
-      <div class="question-screen" id="questionScreen">
-        <div class="progress">
-          <div class="progress-bar" id="progressBar"></div>
-        </div>
-        <div class="question" id="questionText"></div>
-        <div class="options" id="options"></div>
-        <button
-          class="next-btn"
-          id="nextBtn"
-          onclick="nextQuestion()"
-          style="display: none"
-        >
-          Tiếp theo 💕
-        </button>
-      </div>
-
-      <!-- Result Screen -->
-      <div class="result-screen" id="resultScreen">
-        <div class="heart">💕</div>
-        <h1>Kết quả của cục zàng</h1>
-        <div class="result-message" id="resultMessage">
-          Jen nghĩ nghề nghiệp phù hợp của cục zàng là làm vợ anh 💕
-          <div class="copy-message">Đùa đấy copy cái dưới nha!</div>
-        </div>
-        <button class="submit-btn" onclick="copyResults()">
-          Copy kết quả rồi gửi cho Jen 💖
-        </button>
-      </div>
-
-      <!-- Copy Result Screen -->
-      <div class="copy-screen" id="copyScreen">
-        <div class="heart">💕</div>
-        <h1>Kết quả đã được copy!</h1>
-        <div class="copy-message">
-          <p>Kết quả của cục zàng đã được sao chép vào clipboard 💕</p>
-          <p>Bây giờ hãy gửi cho anh để xem nhé! 💖</p>
-        </div>
-        <button class="start-btn" onclick="restartQuiz()">
-          Làm lại từ đầu 💖
-        </button>
-      </div>
     </div>
 
     <script>
-      const questions = [
-        {
-          question: 'Cục zàng thích làm việc một mình hay làm việc nhóm?',
-          options: [
-            'Một mình - yên tĩnh và tập trung',
-            'Làm việc nhóm - vui vẻ và sôi động',
-            'Cả hai đều được',
-            'Tùy theo tâm trạng',
-          ],
-        },
-        {
-          question: 'Cục zàng thích môi trường làm việc như thế nào?',
-          options: [
-            'Văn phòng yên tĩnh',
-            'Ngoài trời năng động',
-            'Linh hoạt - có thể làm từ xa',
-            'Môi trường sáng tạo',
-          ],
-        },
-        {
-          question: 'Cục zàng có thích giao tiếp với người khác không?',
-          options: [
-            'Rất thích - mình là người hướng ngoại',
-            'Vừa phải - không quá nhiều',
-            'Ít thích - mình hướng nội',
-            'Chỉ với người mình thích',
-          ],
-        },
-        {
-          question: 'Cục zàng thích làm việc với gì nhất?',
-          options: [
-            'Số liệu và phân tích',
-            'Sáng tạo và nghệ thuật',
-            'Con người và tương tác',
-            'Công nghệ và máy móc',
-          ],
-        },
-        {
-          question: 'Cục zàng có thích học hỏi cái mới không?',
-          options: [
-            'Rất thích - luôn muốn phát triển',
-            'Có chút - nhưng không quá nhiều',
-            'Chỉ khi cần thiết',
-            'Thích nhưng cần thời gian',
-          ],
-        },
-        {
-          question: 'Cục zàng thích làm việc theo giờ giấc như thế nào?',
-          options: [
-            'Giờ giấc cố định',
-            'Linh hoạt theo ý mình',
-            'Theo dự án',
-            'Kết hợp cả hai',
-          ],
-        },
-        {
-          question: 'Cục zàng có thích quản lý và lãnh đạo không?',
-          options: [
-            'Rất thích - mình có tố chất lãnh đạo',
-            'Có thể - nhưng không quá áp lực',
-            'Không thích - mình thích làm việc độc lập',
-            'Chỉ khi cần thiết',
-          ],
-        },
-        {
-          question: 'Cục zàng thích mức lương như thế nào?',
-          options: [
-            'Ổn định và đảm bảo',
-            'Cao nhưng có rủi ro',
-            'Theo hiệu suất làm việc',
-            'Cân bằng giữa ổn định và thu nhập',
-          ],
-        },
-        {
-          question: 'Cục zàng có thích đi công tác không?',
-          options: [
-            'Rất thích - được khám phá nơi mới',
-            'Thỉnh thoảng - không quá thường xuyên',
-            'Không thích - thích ở nhà',
-            'Tùy theo địa điểm',
-          ],
-        },
-        {
-          question: 'Cục zàng muốn công việc mang lại gì cho mình?',
-          options: [
-            'Thu nhập cao',
-            'Sự thỏa mãn và ý nghĩa',
-            'Cân bằng cuộc sống',
-            'Cơ hội phát triển',
-          ],
-        },
-      ];
-
-      let currentQuestion = 0;
-      let answers = [];
-
-      function startQuiz() {
-        document.getElementById('welcomeScreen').style.display = 'none';
-        document.getElementById('questionScreen').style.display = 'block';
-        showQuestion();
+      // Set fixed date
+      function setCurrentDate() {
+        const dateString = '13 tháng 10 năm 2025';
+        document.getElementById('currentDate').textContent = dateString;
       }
 
-      function showQuestion() {
-        const question = questions[currentQuestion];
-        document.getElementById('questionText').textContent = question.question;
-
-        const optionsContainer = document.getElementById('options');
-        optionsContainer.innerHTML = '';
-
-        question.options.forEach((option, index) => {
-          const button = document.createElement('button');
-          button.className = 'option';
-          button.textContent = option;
-          button.onclick = () => selectOption(index);
-          optionsContainer.appendChild(button);
-        });
-
-        updateProgress();
-      }
-
-      function selectOption(optionIndex) {
-        // Remove previous selection
-        const options = document.querySelectorAll('.option');
-        options.forEach((opt) => opt.classList.remove('selected'));
-
-        // Select current option
-        options[optionIndex].classList.add('selected');
-
-        // Store answer
-        answers[currentQuestion] = optionIndex;
-
-        // Show next button
-        document.getElementById('nextBtn').style.display = 'inline-block';
-      }
-
-      function nextQuestion() {
-        if (currentQuestion < questions.length - 1) {
-          currentQuestion++;
-          showQuestion();
-          document.getElementById('nextBtn').style.display = 'none';
-        } else {
-          showResult();
-        }
-      }
-
-      function updateProgress() {
-        const progress = ((currentQuestion + 1) / questions.length) * 100;
-        document.getElementById('progressBar').style.width = progress + '%';
-      }
-
-      function showResult() {
-        document.getElementById('questionScreen').style.display = 'none';
-        document.getElementById('resultScreen').style.display = 'block';
-      }
-
-      function copyResults() {
-        // Create result object
-        const resultObject = {
-          user: {
-            age: 19,
-            gender: 'female',
-            personality: answers.map((answer, index) => ({
-              question: questions[index].question,
-              answer: questions[index].options[answer],
-            })),
-          },
-          result: 'Jen nghĩ nghề nghiệp phù hợp của cục zàng là vợ anh 💕',
-          timestamp: new Date().toISOString(),
-        };
-
-        // Convert to JSON string
-        const resultText = JSON.stringify(resultObject, null, 2);
-
-        // Copy to clipboard
-        navigator.clipboard
-          .writeText(resultText)
-          .then(() => {
-            // Show success screen
-            document.getElementById('resultScreen').style.display = 'none';
-            document.getElementById('copyScreen').style.display = 'block';
-          })
-          .catch((err) => {
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = resultText;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-
-            // Show success screen
-            document.getElementById('resultScreen').style.display = 'none';
-            document.getElementById('copyScreen').style.display = 'block';
-          });
-      }
-
-      function restartQuiz() {
-        currentQuestion = 0;
-        answers = [];
-        document.getElementById('copyScreen').style.display = 'none';
-        document.getElementById('welcomeScreen').style.display = 'block';
-      }
+      // Initialize date when page loads
+      window.onload = function() {
+        setCurrentDate();
+      };
     </script>
   </body>
 </html>
